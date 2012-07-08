@@ -22,7 +22,6 @@ describe "StaticPages" do
     it { should have_selector('h1', text: 'Contact') }
     it { should have_selector('title', text: "Twitta | Contact") }
   end
-
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
@@ -34,7 +33,7 @@ describe "StaticPages" do
     click_link "Home"
     click_link "Sign up now!"
     should have_selector 'title', text: full_title('Sign up')
-    # click_link "twita"
-    # should have_selector 'h1', text: 'Twitta'
+    click_link "Twitta"
+    should have_selector 'h1', text: 'Twitta'
   end
 end
